@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from preprocessing import *
-import prediction
+from prediction import *
 # -----------------------------------------------------------------------------
 # Draw the actual page
 
