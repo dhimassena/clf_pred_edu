@@ -51,7 +51,7 @@ data["curricular_units_2nd_sem_approved"] = curricular_units_2nd_sem_approved
 curricular_units_2nd_sem_grade = int(st.number_input(label='curricular_units_2nd_sem_grade', value=9))
 data["curricular_units_2nd_sem_grade"] = curricular_units_2nd_sem_grade
 
-gdp = int(st.number_input(label='gdp'))
+gdp = int(st.number_input(label='gdp'), value=5)
 data["gdp"] = gdp
 
 
