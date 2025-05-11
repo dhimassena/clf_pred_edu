@@ -10,14 +10,14 @@ def data_prep(data):
     df = pd.DataFrame()
     
     df["previous_qualification_grade"] = scaler.transform(data[["previous_qualification_grade"]])
-    df["admission_grade"] = scaler.transform(np.asarray(data["admission_grade"]).reshape(-1,1))[0]
-    df["age_at_enrollment"] = scaler.transform(np.asarray(data["age_at_enrollment"]).reshape(-1,1))[0]
-    df["curricular_units_1st_sem_evaluations"] = scaler.transform(np.asarray(data["curricular_units_1st_sem_evaluations"]).reshape(-1,1))[0]
-    df["curricular_units_1st_sem_approved"] = scaler.transform(np.asarray(data["curricular_units_1st_sem_approved"]).reshape(-1,1))[0]
-    df["curricular_units_1st_sem_grade"] = scaler.transform(np.asarray(data["curricular_units_1st_sem_grade"]).reshape(-1,1))[0]
-    df["curricular_units_2nd_sem_evaluations"] = scaler.transform(np.asarray(data["curricular_units_2nd_sem_evaluations"]).reshape(-1,1))[0]
-    df["curricular_units_2nd_sem_approved"] = scaler.transform(np.asarray(data["curricular_units_2nd_sem_approved"]).reshape(-1,1))[0]
-    df["curricular_units_2nd_sem_grade"] = scaler.transform(np.asarray(data["curricular_units_2nd_sem_grade"]).reshape(-1,1))[0]
-    df["gdp"] = scaler.transform(np.asarray(data["gdp"]).reshape(-1,1))[0]
+    df["admission_grade"] = scaler.transform(data[["admission_grade"]])
+    df["age_at_enrollment"] = scaler.transform(data[["age_at_enrollment"]])
+    df["curricular_units_1st_sem_evaluations"] = scaler.transform(data[["curricular_units_1st_sem_evaluations"]])
+    df["curricular_units_1st_sem_approved"] = scaler.transform(data[["curricular_units_1st_sem_approved"]])
+    df["curricular_units_1st_sem_grade"] = scaler.transform(data[["curricular_units_1st_sem_grade"]])
+    df["curricular_units_2nd_sem_evaluations"] = scaler.transform(data[["curricular_units_2nd_sem_evaluations"]])
+    df["curricular_units_2nd_sem_approved"] = scaler.transform(data[["curricular_units_2nd_sem_approved"]])
+    df["curricular_units_2nd_sem_grade"] = scaler.transform(data[["curricular_units_2nd_sem_grade"]])
+    df["gdp"] = scaler.transform(data[["gdp"]])
 
     return df
