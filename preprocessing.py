@@ -8,9 +8,9 @@ scaler = joblib.load("sf_scaler.joblib")
 def data_prep(df):
     # data = data.copy()
     # df = pd.DataFrame()
-    # df = scaler.transform(df)
+    df = scaler.transform(df)
 
-    df["previous_qualification_grade"] = scaler.transform(df[["previous_qualification_grade"]][0])
+    # df["previous_qualification_grade"] = scaler.transform(df[["previous_qualification_grade"]])
     # df["admission_grade"] = scaler.transform(df[["admission_grade"]])
     # df["age_at_enrollment"] = scaler.transform(df[["age_at_enrollment"]])
     # df["curricular_units_1st_sem_evaluations"] = scaler.transform(df[["curricular_units_1st_sem_evaluations"]])
