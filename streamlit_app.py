@@ -67,7 +67,7 @@ data = {
     "gdp":gdp
 }
 
-df = pd.DataFrame(data)
+df = pd.DataFrame(data, index=[0])
 
 with st.expander("View the Raw Data"):
     st.dataframe(data=data, width=800, height=10)
