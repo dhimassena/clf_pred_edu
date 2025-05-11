@@ -73,8 +73,8 @@ with st.expander("View the Raw Data"):
     st.dataframe(data=data, width=800, height=10)
 
 if st.button('Prediksi'):
-    st.info(df)
-    new_data = data_prep(data=data)
+    # st.info(df)
+    new_data = data_prep(data=df)
     with st.expander("View the Preprocessed Data"):
         st.dataframe(data=new_data, width=800, height=10)
     st.write("Hasil Prediksi: {}".format(prediction(new_data)))
