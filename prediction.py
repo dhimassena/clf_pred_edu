@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
-from sklearn.preprocessing import LabelEncoder, MinMaxScaler
 
 model = joblib.load("model.joblib")
 result_target = joblib.load("enc_target.joblib")
