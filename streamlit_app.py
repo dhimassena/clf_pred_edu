@@ -55,19 +55,19 @@ gdp = int(st.number_input(label='gdp', value=5))
 # data["gdp"] = gdp
 
 data = {
-    "previous_qualification_grade": previous_qualification_grade,
-    "admission_grade": admission_grade,
-    "age_at_enrollment": age_at_enrollment,
-    "curricular_units_1st_sem_evaluations": curricular_units_1st_sem_evaluations,
-    "curricular_units_1st_sem_approved": curricular_units_1st_sem_approved,
-    "curricular_units_1st_sem_grade": curricular_units_1st_sem_grade,
-    "curricular_units_2nd_sem_evaluations": curricular_units_2nd_sem_evaluations,
-    "curricular_units_2nd_sem_approved": curricular_units_2nd_sem_approved,
-    "curricular_units_2nd_sem_grade": curricular_units_2nd_sem_grade,
+    "previous_qualification_grade": [previous_qualification_grade],
+    "admission_grade": [admission_grade],
+    "age_at_enrollment": [age_at_enrollment],
+    "curricular_units_1st_sem_evaluations": [curricular_units_1st_sem_evaluations],
+    "curricular_units_1st_sem_approved": [curricular_units_1st_sem_approved],
+    "curricular_units_1st_sem_grade": [curricular_units_1st_sem_grade],
+    "curricular_units_2nd_sem_evaluations": [curricular_units_2nd_sem_evaluations],
+    "curricular_units_2nd_sem_approved": [curricular_units_2nd_sem_approved],
+    "curricular_units_2nd_sem_grade": [curricular_units_2nd_sem_grade],
     "gdp":gdp
 }
 
-df = pd.DataFrame(data, index=[0])
+df = pd.DataFrame(data)
 
 with st.expander("View the Raw Data"):
     st.dataframe(data=df, width=800, height=10)
