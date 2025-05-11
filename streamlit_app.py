@@ -22,45 +22,58 @@ st.info(
     """
 )
 
-data = pd.DataFrame()
+# data = pd.DataFrame()
 
 previous_qualification_grade = int(st.number_input(label='previous_qualification_grade', value=120))
-data["previous_qualification_grade"] = previous_qualification_grade
+# data["previous_qualification_grade"] = previous_qualification_grade
 
 admission_grade = int(st.number_input(label='admission_grade', value=150))
-data["admission_grade"] = admission_grade
+# data["admission_grade"] = admission_grade
 
 age_at_enrollment = int(st.number_input(label='age_at_enrollment', value=28))
-data["age_at_enrollment"] = age_at_enrollment
+# data["age_at_enrollment"] = age_at_enrollment
 
 curricular_units_1st_sem_evaluations = int(st.number_input(label='curricular_units_1st_sem_evaluations', value=10))
-data["curricular_units_1st_sem_evaluations"] = curricular_units_1st_sem_evaluations
+# data["curricular_units_1st_sem_evaluations"] = curricular_units_1st_sem_evaluations
 
 curricular_units_1st_sem_approved = int(st.number_input(label='curricular_units_1st_sem_approved', value=5))
-data["curricular_units_1st_sem_approved"] = curricular_units_1st_sem_approved
+# data["curricular_units_1st_sem_approved"] = curricular_units_1st_sem_approved
 
 curricular_units_1st_sem_grade = int(st.number_input(label='curricular_units_1st_sem_grade', value=6))
-data["curricular_units_1st_sem_grade"] = curricular_units_1st_sem_grade
+# data["curricular_units_1st_sem_grade"] = curricular_units_1st_sem_grade
 
 curricular_units_2nd_sem_evaluations = int(st.number_input(label='curricular_units_2nd_sem_evaluations', value=4))
-data["curricular_units_2nd_sem_evaluations"] = curricular_units_2nd_sem_evaluations
+# data["curricular_units_2nd_sem_evaluations"] = curricular_units_2nd_sem_evaluations
 
 curricular_units_2nd_sem_approved = int(st.number_input(label='curricular_units_2nd_sem_approved', value=8))
-data["curricular_units_2nd_sem_approved"] = curricular_units_2nd_sem_approved
+# data["curricular_units_2nd_sem_approved"] = curricular_units_2nd_sem_approved
 
 curricular_units_2nd_sem_grade = int(st.number_input(label='curricular_units_2nd_sem_grade', value=9))
-data["curricular_units_2nd_sem_grade"] = curricular_units_2nd_sem_grade
+# data["curricular_units_2nd_sem_grade"] = curricular_units_2nd_sem_grade
 
 gdp = int(st.number_input(label='gdp', value=5))
-data["gdp"] = gdp
+# data["gdp"] = gdp
 
+data = {
+    "previous_qualification_grade": previous_qualification_grade,
+    "admission_grade": admission_grade,
+    "age_at_enrollment": age_at_enrollment,
+    "curricular_units_1st_sem_evaluations": curricular_units_1st_sem_evaluations,
+    "curricular_units_1st_sem_approved": curricular_units_1st_sem_approved,
+    "curricular_units_1st_sem_grade": curricular_units_1st_sem_grade,
+    "curricular_units_2nd_sem_evaluations": curricular_units_2nd_sem_evaluations,
+    "curricular_units_2nd_sem_approved": curricular_units_2nd_sem_approved,
+    "curricular_units_2nd_sem_grade": curricular_units_2nd_sem_grade,
+    "gdp":gdp
+}
 
+df = pd.DataFrame(data)
 
 with st.expander("View the Raw Data"):
     st.dataframe(data=data, width=800, height=10)
 
 if st.button('Prediksi'):
-    st.info(curricular_units_2nd_sem_grade)
+    st.info(df)
     new_data = data_prep(data=data)
     with st.expander("View the Preprocessed Data"):
         st.dataframe(data=new_data, width=800, height=10)
