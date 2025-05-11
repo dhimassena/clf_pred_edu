@@ -16,5 +16,5 @@ def prediction(data):
         str: Prediction result (Enrolled, Graduate, or Dropout)
     """
     result = model.predict(data)
-    final_result = result_target.inverse_transform(result)[0]
+    final_result = result_target.inverse_transform(result)
     return final_result
