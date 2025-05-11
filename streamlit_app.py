@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from sklearn.preprocessing import LabelEncoder, MinMaxScaler
+from preprocessing import preprocessing
+from prediction import prediction
 # -----------------------------------------------------------------------------
 # Draw the actual page
 
