@@ -55,10 +55,12 @@ gdp = int(st.number_input(label='gdp', value=5))
 data["gdp"] = gdp
 
 
+
 with st.expander("View the Raw Data"):
     st.dataframe(data=data, width=800, height=10)
 
 if st.button('Prediksi'):
+    st.info(data)
     new_data = data_prep(data=data)
     with st.expander("View the Preprocessed Data"):
         st.dataframe(data=new_data, width=800, height=10)
