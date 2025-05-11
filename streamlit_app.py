@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import preprocessing
+from preprocessing import *
 import prediction
 # -----------------------------------------------------------------------------
 # Draw the actual page
@@ -55,7 +55,7 @@ gdp = int(st.number_input(label='gdp', value=5))
 data["gdp"] = gdp
 
 if st.button('Predict'):
-    new_data = preprocessing(data=data)
+    new_data = data_prep(data=data)
     with st.expander("View the Preprocessed Data"):
         st.dataframe(data=new_data, width=800, height=10)
     st.write("Hasil Prediksi: {}".format(prediction(new_data)))

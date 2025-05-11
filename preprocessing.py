@@ -20,3 +20,5 @@ def data_prep(data):
     df["curricular_units_2nd_sem_approved"] = scaler.transform(np.asarray(data["curricular_units_2nd_sem_approved"]).reshape(-1,1))[0]
     df["curricular_units_2nd_sem_grade"] = scaler.transform(np.asarray(data["curricular_units_2nd_sem_grade"]).reshape(-1,1))[0]
     df["gdp"] = scaler.transform(np.asarray(data["gdp"]).reshape(-1,1))[0]
+
+    return df
