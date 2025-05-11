@@ -52,7 +52,7 @@ curricular_units_2nd_sem_grade = int(st.number_input(label='curricular_units_2nd
 data["curricular_units_2nd_sem_grade"] = curricular_units_2nd_sem_grade
 
 gdp = int(st.number_input(label='gdp', value=5))
-data["gdp"] = curricular_units_2nd_sem_grade
+data["gdp"] = gdp
 
 if st.button('Predict'):
     new_data = preprocessing(data=data)
