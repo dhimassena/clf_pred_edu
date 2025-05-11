@@ -1,8 +1,10 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from preprocessing import preprocessing
-from prediction import prediction
+# from preprocessing import preprocessing
+# from prediction import prediction
+
+
 # -----------------------------------------------------------------------------
 # Draw the actual page
 
