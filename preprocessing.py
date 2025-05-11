@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import joblib
 
-scaler = joblib.load("num_col_scaler.joblib")
+scaler = joblib.load("sf_scaler.joblib")
 
 def data_prep(df):
     # data = data.copy()
