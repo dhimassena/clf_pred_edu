@@ -5,10 +5,10 @@ import joblib
 
 scaler = joblib.load("num_col_scaler.joblib")
 
-def data_prep(data):
-    data = data.copy()
-    df = pd.DataFrame()
-    df = scaler.transform(data)
+def data_prep(df):
+    # data = data.copy()
+    # df = pd.DataFrame()
+    df = scaler.transform(df)
     # df["previous_qualification_grade"] = scaler.transform(data[["previous_qualification_grade"]])
     # df["admission_grade"] = scaler.transform(data[["admission_grade"]])
     # df["age_at_enrollment"] = scaler.transform(data[["age_at_enrollment"]])
