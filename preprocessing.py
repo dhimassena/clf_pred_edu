@@ -9,7 +9,7 @@ def data_prep(data):
     data = data.copy()
     df = pd.DataFrame()
     
-    df["previous_qualification_grade"] = scaler.fit_transform(data["previous_qualification_grade"])
+    df["previous_qualification_grade"] = scaler.fit_transform(data["previous_qualification_grade"]).reshape(-1,1)[0]
     df["admission_grade"] = scaler.transform(np.asarray(data["admission_grade"]).reshape(-1,1))[0]
     df["age_at_enrollment"] = scaler.transform(np.asarray(data["age_at_enrollment"]).reshape(-1,1))[0]
     df["curricular_units_1st_sem_evaluations"] = scaler.transform(np.asarray(data["curricular_units_1st_sem_evaluations"]).reshape(-1,1))[0]
