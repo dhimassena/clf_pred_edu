@@ -17,4 +17,4 @@ def prediction(data):
     """
     result = model.predict(data)
     final_result = result_target.inverse_transform(result)
-    return final_result
+    return result
