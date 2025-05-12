@@ -77,4 +77,7 @@ if st.button('Prediksi'):
     new_data = data_prep(df=df)
     with st.expander("View the Preprocessed Data"):
         st.dataframe(data=new_data, width=800, height=10)
-    st.write("Hasil Prediksi: {}".format(prediction(new_data)))
+    hasil = prediction(new_data)
+    hasil = hasil.map({0: "Dropout", 1: "Enrolled", 2: "Graduate"})
+    # st.write("Hasil Prediksi: {}".format(prediction(new_data)))
+    st.write(f"Hasil Prediksi: {hasil}")
