@@ -23,12 +23,13 @@ st.info(
 )
 
 # data = pd.DataFrame()
-
-previous_qualification_grade = int(st.number_input(label='previous_qualification_grade', value=120))
-# data["previous_qualification_grade"] = previous_qualification_grade
-
-admission_grade = int(st.number_input(label='admission_grade', value=150))
-# data["admission_grade"] = admission_grade
+col1, col2 = st.columns(2)
+with col1:
+    previous_qualification_grade = int(st.number_input(label='previous_qualification_grade', value=120))
+    # data["previous_qualification_grade"] = previous_qualification_grade
+with col2:
+    admission_grade = int(st.number_input(label='admission_grade', value=150))
+    # data["admission_grade"] = admission_grade
 
 age_at_enrollment = int(st.number_input(label='age_at_enrollment', value=28))
 # data["age_at_enrollment"] = age_at_enrollment
