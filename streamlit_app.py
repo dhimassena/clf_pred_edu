@@ -75,8 +75,8 @@ with st.expander("View the Raw Data"):
 if st.button('Prediksi'):
     # st.info(df)
     new_data = data_prep(df=df)
-    with st.expander("View the Preprocessed Data"):
-        st.dataframe(data=new_data, width=800, height=10)
+    # with st.expander("View the Preprocessed Data"):
+        # st.dataframe(data=new_data, width=800, height=10)
     hasil = prediction(new_data)
     # hasil = hasil.map({0: "Dropout", 1: "Enrolled", 2: "Graduate"})
     if(hasil == 0):
